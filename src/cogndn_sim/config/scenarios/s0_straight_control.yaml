@@ -1,0 +1,12 @@
+id: s0_straight_control
+description: >
+  Fairness control. Straight drive through the junction with no hazards and no road signs.
+  Only route map tiles are needed, so route-based prefetching should match Cognitive-NDN here.
+instruction: Follow the main road east and go straight at junction x1.
+planned_route: [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+truth_route:   [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+spawn: [2.0, -1.75, 0.0]
+signs: []
+objects: []
+data: {}
+required: []          # route map tiles are always required and added automatically

@@ -1,0 +1,37 @@
+# "Indian street" clutter added to every *_mcity_vla world (never to the controlled town worlds).
+# Nothing static is placed in the ego safety corridor (y -3.15 .. -0.35); only ped_crossing enters it.
+# All poses are in town coordinates (metres): the ego drives +x in the lane y = -1.75; oncoming lane y = +1.75.
+# The Mcity straight is paved from y = -9 (right kerb) to y = +15 (left service strip).
+# Every actor follows a fixed script, so each policy sees exactly the same street in every run.
+walk_dae: https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae
+cow_uri: model://cow        # life-size (the raw Fuel scan is a 14 cm toy)
+pedestrians:              # animated walkers; path is looped back and forth at `speed` m/s
+  - {id: ped_footpath_r, path: [[8, -6.0], [92, -6.0]], speed: 1.2}
+  - {id: ped_service_l,  path: [[160, 12.5], [60, 12.5]], speed: 1.0}
+  - {id: ped_crossing,   path: [[38, -8.0], [38, 13.0]], speed: 1.1, pause_s: 25}   # crosses the ego lane
+  - {id: child_school,   path: [[118, -6.0], [148, -6.0]], speed: 0.9, scale: 0.6}
+cows:                     # stray cattle standing at the roadside and on the service strip
+  - {id: cow_1, pose: [58, 9.0, 0.4]}
+  - {id: cow_2, pose: [136, -8.7, 3.0]}
+  - {id: cow_3, pose: [176, 10.5, -1.2]}
+dogs:                     # street dogs: lying, standing, and one trotting along the kerb
+  - {id: dog_1, pose: [34, -7.9, 1.2]}
+  - {id: dog_2, pose: [96, 11.0, -2.0]}
+  - {id: dog_3, pose: [100, -7.0, 3.1416], speed: 0.7}
+parked:                   # parked cars (solid colours; the ego is the only white Prius) and autorickshaws
+  - {id: parked_car_1, kind: car,  color: red,    pose: [18, 10.0, 0.0]}
+  - {id: parked_car_2, kind: car,  color: grey,   pose: [44, 10.0, 3.1416]}
+  - {id: parked_auto_1, kind: auto, pose: [52, -8.1, 0.0]}
+  - {id: parked_car_3, kind: car,  color: yellow, pose: [128, 10.0, 0.0]}
+  - {id: parked_auto_2, kind: auto, pose: [168, -8.1, 3.1416]}
+traffic:                  # oncoming vehicles in the opposite lane (they never enter the ego lane)
+  - {id: oncoming_car_1,  kind: car,  color: blue, pose: [205, 1.9, 3.1416], speed: 6.0}
+  - {id: oncoming_auto_1, kind: auto, pose: [250, 1.9, 3.1416], speed: 4.5}
+  - {id: oncoming_car_2,  kind: car,  color: red,  pose: [300, 1.9, 3.1416], speed: 7.0}
+# Scenario-specific exclusions keep each scenario's meaning intact:
+# the decoy scenario must show a cattle sign with NO cattle anywhere, and the livestock scenario has its own bull.
+exclude:
+  s5_decoy_sign: [cows]
+  s3_closure_detour: [traffic]   # the closure barrier blocks the road, so no through traffic
+  s2_workzone: [traffic]         # the right lane is closed, so the car must use the oncoming lane
+  s1_livestock: [cows, traffic]  # likewise: the car passes the bull in the oncoming lane

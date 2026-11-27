@@ -1,0 +1,15 @@
+# Road graph of the Cognitive-NDN test town (metres, ENU world frame, x = east, y = north).
+# Each road is cut into zones of `zone_length` m; zone ids = prefix + index (m0..m4, e0..e4, ...).
+zone_length: 20.0
+lane_width: 3.5
+roads:
+  - {id: main,  prefix: m, start: [0.0, 0.0],   end: [100.0, 0.0]}
+  - {id: east,  prefix: e, start: [110.0, 0.0], end: [210.0, 0.0]}
+  - {id: north, prefix: n, start: [105.0, 5.0], end: [105.0, 105.0]}
+  - {id: south, prefix: s, start: [105.0, -5.0], end: [105.0, -105.0]}
+intersections:
+  - id: x1
+    center: [105.0, 0.0]
+    size: 10.0
+    entries: [m4]
+    exits: {e0: straight, n0: left, s0: right}

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cogndn_bringup</name>
+  <version>1.0.0</version>
+  <description>Launch files, parameters and run scripts for Cognitive-NDN.</description>
+  <maintainer email="team@cogndn.local">Cognitive-NDN team</maintainer>
+  <license>MIT</license>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>cogndn_sim</exec_depend>
+  <exec_depend>cogndn_perception</exec_depend>
+  <exec_depend>cogndn_cognition</exec_depend>
+  <exec_depend>cogndn_compiler</exec_depend>
+  <exec_depend>cogndn_ndn</exec_depend>
+  <exec_depend>cogndn_navigation</exec_depend>
+  <exec_depend>cogndn_explain</exec_depend>
+  <exec_depend>cogndn_eval</exec_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

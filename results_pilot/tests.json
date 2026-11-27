@@ -1,0 +1,222 @@
+{
+ "E1_tests": {
+  "s1_livestock|cognitive-route_typed|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.0,
+   "p": 1.0,
+   "dz": 0.0
+  },
+  "s1_livestock|cognitive-route_typed|kb_per_km": {
+   "n": 270,
+   "mean_diff": -72.69841269841248,
+   "p": 8.308633693118545e-47,
+   "dz": -4.2234762312929615
+  },
+  "s2_workzone|cognitive-route_typed|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.8277777777777777,
+   "p": 2.2812602464169094e-50,
+   "dz": 2.577648108824598
+  },
+  "s2_workzone|cognitive-route_typed|kb_per_km": {
+   "n": 270,
+   "mean_diff": -73.22751322751299,
+   "p": 8.322997072346003e-47,
+   "dz": -4.31816422049831
+  },
+  "s3_closure_detour|cognitive-route_typed|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.048888888888888836,
+   "p": 0.0023769714623022467,
+   "dz": 0.2536308924206636
+  },
+  "s3_closure_detour|cognitive-route_typed|kb_per_km": {
+   "n": 270,
+   "mean_diff": -933.3333333333333,
+   "p": 1.042441183898274e-46,
+   "dz": -1.0809420050087364
+  },
+  "s4_school_crossing|cognitive-route_typed|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.4444444444444444,
+   "p": 4.613148942237287e-54,
+   "dz": 2.8231844378946214
+  },
+  "s4_school_crossing|cognitive-route_typed|kb_per_km": {
+   "n": 270,
+   "mean_diff": -66.34920634920636,
+   "p": 1.8268393555437296e-46,
+   "dz": -4.575233878193745
+  },
+  "s1_livestock|cognitive-route_all|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.0,
+   "p": 1.0,
+   "dz": 0.0
+  },
+  "s1_livestock|cognitive-route_all|kb_per_km": {
+   "n": 270,
+   "mean_diff": -10664.232804232804,
+   "p": 2.8118334185308367e-44,
+   "dz": -2.066649223137972
+  },
+  "s2_workzone|cognitive-route_all|cov_semantic": {
+   "n": 270,
+   "mean_diff": -0.11666666666666667,
+   "p": 2.57018452450684e-08,
+   "dz": -0.4772516503088087
+  },
+  "s2_workzone|cognitive-route_all|kb_per_km": {
+   "n": 270,
+   "mean_diff": -10474.285714285716,
+   "p": 2.8070909199469395e-44,
+   "dz": -2.0298845403392
+  },
+  "s3_closure_detour|cognitive-route_all|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.026666666666666658,
+   "p": 0.4438949819162794,
+   "dz": 0.08000118961761234
+  },
+  "s3_closure_detour|cognitive-route_all|kb_per_km": {
+   "n": 270,
+   "mean_diff": -12353.086419753086,
+   "p": 2.89874853295644e-44,
+   "dz": -1.8172523538939709
+  },
+  "s4_school_crossing|cognitive-route_all|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.1111111111111111,
+   "p": 0.00011839421715575049,
+   "dz": 0.3213147047873308
+  },
+  "s4_school_crossing|cognitive-route_all|kb_per_km": {
+   "n": 270,
+   "mean_diff": -10653.121693121693,
+   "p": 5.566037238410591e-44,
+   "dz": -2.06505769030589
+  },
+  "s1_livestock|cognitive-rules|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.1111111111111111,
+   "p": 0.0010185390801849424,
+   "dz": 0.35289805473682767
+  },
+  "s1_livestock|cognitive-rules|kb_per_km": {
+   "n": 270,
+   "mean_diff": 41.58730158730129,
+   "p": 8.308633693118545e-47,
+   "dz": 3.6998518504886286
+  },
+  "s2_workzone|cognitive-rules|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.8277777777777777,
+   "p": 2.2812602464169094e-50,
+   "dz": 2.577648108824598
+  },
+  "s2_workzone|cognitive-rules|kb_per_km": {
+   "n": 270,
+   "mean_diff": 50.58201058200996,
+   "p": 8.322997072346003e-47,
+   "dz": 4.566572857853195
+  },
+  "s3_closure_detour|cognitive-rules|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.2488888888888889,
+   "p": 3.8387729771362255e-37,
+   "dz": 1.2912118159597434
+  },
+  "s3_closure_detour|cognitive-rules|kb_per_km": {
+   "n": 270,
+   "mean_diff": -795.2380952380947,
+   "p": 5.836755841092577e-17,
+   "dz": -0.9274276483132196
+  },
+  "s4_school_crossing|cognitive-rules|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.4444444444444444,
+   "p": 4.613148942237287e-54,
+   "dz": 2.8231844378946214
+  },
+  "s4_school_crossing|cognitive-rules|kb_per_km": {
+   "n": 270,
+   "mean_diff": 52.698412698412604,
+   "p": 1.1779048658845666e-46,
+   "dz": 5.789757781267013
+  },
+  "s1_livestock|cognitive-ndn_ondemand|cov_semantic": {
+   "n": 270,
+   "mean_diff": 1.0,
+   "p": 1.1347736761871499e-60,
+   "dz": Infinity
+  },
+  "s1_livestock|cognitive-ndn_ondemand|kb_per_km": {
+   "n": 270,
+   "mean_diff": 993.9682539682535,
+   "p": 8.308633693118545e-47,
+   "dz": 88.4292835410685
+  },
+  "s2_workzone|cognitive-ndn_ondemand|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.8277777777777777,
+   "p": 2.2812602464169094e-50,
+   "dz": 2.577648108824598
+  },
+  "s2_workzone|cognitive-ndn_ondemand|kb_per_km": {
+   "n": 270,
+   "mean_diff": 1002.9629629629641,
+   "p": 8.322997072346003e-47,
+   "dz": 90.54807018145014
+  },
+  "s3_closure_detour|cognitive-ndn_ondemand|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.8488888888888888,
+   "p": 2.1894030777439294e-49,
+   "dz": 4.403954586576981
+  },
+  "s3_closure_detour|cognitive-ndn_ondemand|kb_per_km": {
+   "n": 270,
+   "mean_diff": 2061.9047619047624,
+   "p": 1.042441183898274e-46,
+   "dz": 2.40464773484805
+  },
+  "s4_school_crossing|cognitive-ndn_ondemand|cov_semantic": {
+   "n": 270,
+   "mean_diff": 0.9444444444444444,
+   "p": 2.0407877683848966e-55,
+   "dz": 5.999266930526071
+  },
+  "s4_school_crossing|cognitive-ndn_ondemand|kb_per_km": {
+   "n": 270,
+   "mean_diff": 1005.079365079365,
+   "p": 1.1779048658845666e-46,
+   "dz": 110.42393455115297
+  }
+ },
+ "E6_tests": {
+  "cognitive-route_typed|cov_all": {
+   "n": 270,
+   "mean_diff": 0.0,
+   "p": 1.0,
+   "dz": 0.0
+  },
+  "cognitive-route_typed|kb_per_km": {
+   "n": 270,
+   "mean_diff": -74.28571428571401,
+   "p": 6.801856933351248e-47,
+   "dz": -4.603687586483113
+  },
+  "cognitive-rules|cov_all": {
+   "n": 270,
+   "mean_diff": 0.0,
+   "p": 1.0,
+   "dz": 0.0
+  },
+  "cognitive-rules|kb_per_km": {
+   "n": 270,
+   "mean_diff": 49.523809523808936,
+   "p": 6.801856933351248e-47,
+   "dz": 4.819129611985109
+  }
+ }
+}

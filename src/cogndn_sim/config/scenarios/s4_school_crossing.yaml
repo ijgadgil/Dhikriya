@@ -1,0 +1,18 @@
+id: s4_school_crossing
+description: >
+  A school-zone sign precedes a pedestrian crossing in zone e2. The crossing occupancy (crosswalk)
+  for e2 and the straight signal phase at x1 are needed. A pedestrian waits at the crossing.
+instruction: Follow the main road east and go straight at junction x1.
+planned_route: [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+truth_route:   [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+spawn: [2.0, -1.75, 0.0]
+signs:
+  - {id: sign_school, text: ["SCHOOL ZONE", "PEDESTRIAN", "CROSSING"], pose: [70.0, -5.5, 0.0], facing_deg: 180}
+objects:
+  - {id: walker, kind: person, pose: [152.0, -6.0, 1.57]}
+data:
+  /cogndn/town/e2/crosswalk: {status: active, occupied: true, summary: "Pedestrian waiting at the e2 crossing", category: person}
+required:
+  - {zone: e2, type: crosswalk, deadline_zone: e2,
+     cues: [{kind: sign, s: 70.0, visible_m: 35.0}, {kind: object, cls: person, s: 157.0, visible_m: 30.0}]}
+  - {zone: x1, type: signal, qualifier: straight, deadline_zone: x1, cues: [{kind: route, s: 0.0, visible_m: 1000.0}]}

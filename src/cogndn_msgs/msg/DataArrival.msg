@@ -1,0 +1,9 @@
+std_msgs/Header header
+string name
+bool sig_ok
+string signer
+string digest
+float32 latency_s
+int32 segments
+float64 fresh_until
+string error

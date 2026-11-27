@@ -1,0 +1,23 @@
+id: s3_closure_detour
+description: >
+  The east road is closed beyond the junction. A sign announces the detour left. The vehicle must
+  turn left at x1, so it needs the left-turn signal phase, the detour map and the north-road map tiles,
+  none of which are on the planned route.
+instruction: Follow the main road east; obey any detour signs.
+planned_route: [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+truth_route:   [m0, m1, m2, m3, m4, x1, n0, n1, n2, n3, n4]
+spawn: [2.0, -1.75, 0.0]
+signs:
+  - {id: sign_detour, text: ["ROAD CLOSED", "AHEAD", "DETOUR LEFT"], pose: [40.0, -5.5, 0.0], facing_deg: 180}
+objects:
+  - {id: barrier, kind: barrier, pose: [114.0, 0.0, 1.5708]}
+data:
+  /cogndn/town/x1/detour: {status: active, closed: [e0, e1], via: [n0, n1, n2], summary: "East road closed after x1; detour via north road", category: closure}
+  /cogndn/town/e0/hazard: {category: closure, status: active, summary: "Road closed at e0", severity: high}
+required:
+  - {zone: x1, type: detour, deadline_zone: x1, cues: [{kind: sign, s: 40.0, visible_m: 35.0}]}
+  - {zone: x1, type: signal, qualifier: left, deadline_zone: x1, cues: [{kind: sign, s: 40.0, visible_m: 35.0}]}
+  - {zone: n0, type: map, deadline_zone: n0, cues: [{kind: sign, s: 40.0, visible_m: 35.0}]}
+  - {zone: n1, type: map, deadline_zone: n1, cues: [{kind: sign, s: 40.0, visible_m: 35.0}]}
+  - {zone: n2, type: map, deadline_zone: n2, cues: [{kind: sign, s: 40.0, visible_m: 35.0}]}
+replan_cue: {kind: object, cls: barrier, s: 114.0, visible_m: 25.0}   # when a non-VLA stack notices the closure

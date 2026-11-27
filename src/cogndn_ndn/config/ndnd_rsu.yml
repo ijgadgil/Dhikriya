@@ -1,0 +1,60 @@
+# NDNd forwarder for the rsu node (Cognitive-NDN). Start with: ndnd fw run ndnd_rsu.yml
+core:
+  log_level: WARN
+  log_file: ""
+faces:
+  queue_size: 1024
+  congestion_marking: true
+  lock_threads_to_cores: false
+  udp:
+    enabled_unicast: true
+    enabled_multicast: false
+    port_unicast: 6363
+    port_multicast: 56363
+    multicast_address_ipv4: 224.0.23.170
+    multicast_address_ipv6: ff02::114
+    lifetime: 600
+    default_mtu: 1420
+  tcp:
+    enabled: true
+    port_unicast: 6363
+    lifetime: 600
+    reconnect_interval: 10
+  unix:
+    enabled: true
+    socket_path: /run/cogndn/rsu.sock
+  websocket:
+    enabled: false
+    bind: ""
+    port: 9696
+    tls_enabled: false
+    tls_cert: ""
+    tls_key: ""
+  http3:
+    enabled: false
+    bind: ""
+    port: 443
+    tls_cert: ""
+    tls_key: ""
+fw:
+  threads: 4
+  queue_size: 1024
+  lock_threads_to_cores: false
+mgmt:
+  allow_localhop: false
+tables:
+  content_store:
+    capacity: 65535          # packets; one 200 kB map tile is 29 segments
+    admit: true
+    serve: true
+    replacement_policy: lru
+  dead_nonce_list:
+    lifetime: 6000
+  network_region:
+    regions: []
+  rib:
+    readvertise_nlsr: false
+  fib:
+    algorithm: nametree
+    hashtable:
+      m: 5

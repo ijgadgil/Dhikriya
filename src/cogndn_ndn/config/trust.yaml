@@ -1,0 +1,6 @@
+# Type-based trust policy: which authority may sign which kind of data.
+# Keys are created by `ros2 run cogndn_ndn make_keys` (or scripts/make_keys.py).
+authorities:
+  road:         {key_name: /cogndn/authority/road/KEY/1,         types: [hazard, workzone, detour, crosswalk, scene]}
+  intersection: {key_name: /cogndn/authority/intersection/KEY/1, types: [signal]}
+  maps:         {key_name: /cogndn/authority/maps/KEY/1,         types: [map]}

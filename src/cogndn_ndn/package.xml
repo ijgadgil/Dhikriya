@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>cogndn_ndn</name>
+  <version>1.0.0</version>
+  <description>NDN data plane: keys and trust policy, signed segmented producer, verifying consumer node, fleet and calibration tools.</description>
+  <maintainer email="team@cogndn.local">Cognitive-NDN team</maintainer>
+  <license>MIT</license>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>cogndn_msgs</exec_depend>
+  <exec_depend>cogndn_core</exec_depend>
+  <test_depend>python3-pytest</test_depend>
+  <export><build_type>ament_python</build_type></export>
+</package>

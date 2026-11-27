@@ -1,0 +1,50 @@
+# Shared parameters for all Cognitive-NDN nodes (wall-clock based; keep Gazebo real-time factor near 1).
+/**:
+  ros__parameters:
+    redis_host: localhost
+    redis_port: 6379
+    odom_is_world: false
+yolo_node:
+  ros__parameters:
+    conf: 0.25
+    half: true
+lidar_cluster_node:
+  ros__parameters:
+    ground_z: -1.8
+vla_node:
+  ros__parameters:
+    ollama_url: http://localhost:11434
+    min_interval_s: 0.0      # back-to-back reasoning; raise to save GPU
+    horizon_m: 120.0
+    context_k: 4
+    max_side: 672
+    num_predict: 320
+    timeout_s: 30.0
+compiler_node:
+  ros__parameters:
+    rate_hz: 10.0
+    rate_est_kbps: 10000.0   # set from calibrate (fleet --mode calibrate)
+    rtt_est: 0.08
+    beta: 0.5
+    tau0: 5.0
+    horizon_s: 60.0
+    interest_rate: 20.0
+    burst: 10
+    silent_s: 15.0
+ndn_consumer_node:
+  ros__parameters:
+    socket: /run/cogndn/veh.sock
+    window: 8
+driver_node:
+  ros__parameters:
+    slow: 1.5
+    rate_hz: 20.0
+safety_envelope:
+  ros__parameters:
+    yaw_deg: 0.0             # calibrate with scripts/lidar_check.py if obstacles appear at the wrong bearing
+    ground_z: -1.8
+    d_stop: 6.5              # leaves room to steer around a stopped-for obstacle (turn radius ~4.8 m)
+    t_stop: 1.2
+    t_slow: 4.0
+    a_brake: 3.0
+    rate_hz: 20.0

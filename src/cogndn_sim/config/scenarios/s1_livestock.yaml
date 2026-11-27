@@ -1,0 +1,18 @@
+id: s1_livestock
+description: >
+  A cattle-crossing sign is readable early; a bull stands in the right lane in zone m3.
+  The hazard bulletin for m3 is needed before entering m3. The detector can only see the bull
+  when it is close, so detector rules react later than a VLA that reads the sign.
+instruction: Follow the main road east and go straight at junction x1.
+planned_route: [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+truth_route:   [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+spawn: [2.0, -1.75, 0.0]
+signs:
+  - {id: sign_cattle, text: ["CATTLE", "CROSSING", "AHEAD"], pose: [30.0, -5.5, 0.0], facing_deg: 180}
+objects:
+  - {id: bull, kind: bull, pose: [74.0, -1.75, 1.57]}
+data:
+  /cogndn/town/m3/hazard: {category: animal, status: active, lanes_closed: [R], summary: "Livestock on the road in zone m3, right lane", severity: high}
+required:
+  - {zone: m3, type: hazard, deadline_zone: m3,
+     cues: [{kind: sign, s: 30.0, visible_m: 35.0}, {kind: object, cls: cow, s: 74.0, visible_m: 30.0}]}

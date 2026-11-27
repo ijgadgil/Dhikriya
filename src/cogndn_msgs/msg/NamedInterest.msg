@@ -1,0 +1,9 @@
+string name
+string zone
+string type
+string qualifier
+float32 priority
+float64 deadline
+float32 lifetime_s
+string source
+bool late_risk

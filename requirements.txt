@@ -1,0 +1,12 @@
+# Python packages not provided by ROS 2 Jazzy apt packages (install with: pip install --break-system-packages -r requirements.txt)
+python-ndn>=0.5
+pycryptodomex>=3.20
+pydantic>=2.6
+redis>=5.0
+ultralytics>=8.2
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.8
+pytest>=7
+flake8>=7
+pytesseract>=0.3       # camera OCR for road-sign text (needs: sudo apt install tesseract-ocr)

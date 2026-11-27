@@ -1,0 +1,19 @@
+id: s2_workzone
+description: >
+  Road-work sign announces a right-lane closure in zones m3-m4 marked by barrels. The work-zone
+  layout for m3 is needed before entering m3. Barrels are not a detector class, so detector rules
+  cannot anticipate this need; route-typed prefetching does not fetch work-zone data.
+instruction: Follow the main road east and go straight at junction x1.
+planned_route: [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+truth_route:   [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+spawn: [2.0, -1.75, 0.0]
+signs:
+  - {id: sign_work, text: ["ROAD WORK", "RIGHT LANE", "CLOSED"], pose: [24.0, -5.5, 0.0], facing_deg: 180}
+objects:
+  - {id: barrels, kind: barrels, from: [66.0, -1.75], to: [94.0, -1.75], spacing: 4.0}
+data:
+  /cogndn/town/m3/workzone: {status: active, lanes_closed: [R], from_m: 66, to_m: 94, summary: "Right lane closed in m3-m4, merge left", category: workzone}
+  /cogndn/town/m4/workzone: {status: active, lanes_closed: [R], summary: "Right lane closed in m4", category: workzone}
+required:
+  - {zone: m3, type: workzone, deadline_zone: m3, cues: [{kind: sign, s: 24.0, visible_m: 35.0}]}
+  - {zone: m4, type: workzone, deadline_zone: m4, cues: [{kind: sign, s: 24.0, visible_m: 35.0}]}

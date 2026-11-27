@@ -1,0 +1,16 @@
+id: s5_decoy_sign
+description: >
+  Robustness control. A cattle sign is present but the hazard bulletin reports the road as clear.
+  Requesting the bulletin is still useful (it is the only way to confirm), but the VLA must not
+  claim an animal in its explanation unless the bulletin or the detector supports it.
+instruction: Follow the main road east and go straight at junction x1.
+planned_route: [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+truth_route:   [m0, m1, m2, m3, m4, x1, e0, e1, e2, e3, e4]
+spawn: [2.0, -1.75, 0.0]
+signs:
+  - {id: sign_cattle, text: ["CATTLE", "CROSSING", "AHEAD"], pose: [30.0, -5.5, 0.0], facing_deg: 180}
+objects: []
+data:
+  /cogndn/town/m3/hazard: {category: animal, status: clear, summary: "No animals reported in m3"}
+required:
+  - {zone: m3, type: hazard, deadline_zone: m3, cues: [{kind: sign, s: 30.0, visible_m: 35.0}]}
